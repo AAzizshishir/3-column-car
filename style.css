@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  /* Font Family */
+  --primaryFont: "Lexend Deca", sans-serif;
+  --secondaryFont: "Big Shoulders Display", sans-serif;
+
+  /* Color */
+  /* Primary */
+
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+
+  /* paragraphs */
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+
+  /* background, headings, buttons */
+  --veryLightGray: hsl(0, 0%, 95%);
+}
+body {
+  min-height: 100vh;
+  background-color: var(--veryLightGray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main {
+  max-width: 700px;
+  display: flex;
+}
+.car {
+  padding: 1.2rem 2rem;
+}
+.car h1 {
+  font-family: var(--secondaryFont);
+  font-weight: 700;
+  color: var(--veryLightGray);
+  text-transform: uppercase;
+}
+.car p {
+  color: var(--transparentWhite);
+  margin-bottom: 4rem;
+  font-family: var(--primaryFont);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4rem;
+}
+.btn {
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 2px solid var(--veryLightGray);
+  background: var(--veryLightGray);
+  margin-bottom: 20px;
+}
+.btn:hover {
+  background: transparent;
+  color: var(--veryLightGray);
+}
+.sedan-btn {
+  color: var(--brightOrange);
+  text-align: center;
+}
+.suv-btn {
+  color: var(--darkCyan);
+}
+.luxury-btn {
+  color: var(--veryDarkCyan);
+}
+.sedan {
+  background-color: var(--brightOrange);
+  border-radius: 8px 0px 0px 8px;
+}
+.suv {
+  background-color: var(--darkCyan);
+}
+.luxury {
+  background-color: var(--veryDarkCyan);
+  border-radius: 0px 8px 8px 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    width: 80%;
+    flex-direction: column;
+  }
+  .sedan {
+    border-radius: 8px 8px 0px 0px;
+  }
+  .luxury {
+    border-radius: 0px 0px 8px 8px;
+  }
+}
